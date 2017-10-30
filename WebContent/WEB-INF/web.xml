@@ -20,4 +20,53 @@
     <filter-name>SuccessFilter</filter-name>
     <url-pattern>/loginSuccess/success.jsp</url-pattern>
   </filter-mapping>
+  <servlet>
+    <description></description>
+    <display-name>BookAddServlet</display-name>
+    <servlet-name>BookAddServlet</servlet-name>
+    <servlet-class>com.mcmaster.web.BookAddServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BookAddServlet</servlet-name>
+    <url-pattern>/book_add</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>BookDeleteServlet</display-name>
+    <servlet-name>BookDeleteServlet</servlet-name>
+    <servlet-class>com.mcmaster.web.BookDeleteServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BookDeleteServlet</servlet-name>
+    <url-pattern>/book_delete</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>BookUpdateServlet</display-name>
+    <servlet-name>BookUpdateServlet</servlet-name>
+    <servlet-class>com.mcmaster.web.BookUpdateServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BookUpdateServlet</servlet-name>
+    <url-pattern>/book_update</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>BookSearchServlet</display-name>
+    <servlet-name>BookSearchServlet</servlet-name>
+    <servlet-class>com.mcmaster.web.BookSearchServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BookSearchServlet</servlet-name>
+    <url-pattern>/book_search</url-pattern>
+  </servlet-mapping>
+  <filter>
+    <display-name>PrivilegeFilter</display-name>
+    <filter-name>PrivilegeFilter</filter-name>
+    <filter-class>com.mcmaster.filter.PrivilegeFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>PrivilegeFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
 </web-app>

@@ -11,5 +11,12 @@ public class LoginService {
 		Users ret = dao.userLogin(user);
 		return ret;
 	}
+	
+	public String findRole(Users users) throws MyException
+	{
+		LoginDao dao = new LoginDao();
+		String role = dao.findRole(users);
+		return role;
+	}
 
 }

@@ -24,4 +24,17 @@ public class LoginDao {
 		return resultUser;
 	}
 
+	public String findRole(Users users) throws MyException {
+		QueryRunner runner = new QueryRunner(DataSourceUtils.getDataSource());
+		String sql = "select * from user where username=? and password = ?";
+		Users ret = null;
+		try {
+			ret = runner.query(sql, new BeanHandler<Users>(Users.class), users.getUsername(), users.getPassword());
+		} catch (SQLException e) {
+			throw new MyException("findRole Exception: " + e.getMessage());
+		}
+		
+		return ret.getRole();
+	}
+
 }
